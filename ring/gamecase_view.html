@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Game Case Viewer</title>
+  <link rel="stylesheet" href="../styles.css"/>
+</head>
+<body>
+  <div class="gamecase">
+    <h1 id="gameTitle"></h1>
+    <div class="cover-upload">
+      <img id="coverPreview" src="" alt="Game Cover" class="cover" />
+    </div>
+
+    <p><strong>Game Type:</strong> <span id="gameType"></span></p>
+    <p><strong>Why Abandoned:</strong> <span id="whyAbandonSelect"></span></p>
+
+    <section>
+      <h2>Description</h2>
+      <p id="description"></p>
+    </section>
+
+    <section>
+      <h2>Abandonment Details</h2>
+      <p id="whyAbandon"></p>
+    </section>
+
+    <section>
+      <h2>Future Considerations</h2>
+      <p id="futureConsideration"></p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p id="contactInfo"></p>
+    </section>
+
+
+    <footer>
+      <div class="webring">
+        <button id="prevBtn">⬅ Previous</button>
+        <button id="randomBtn">🔄 Random</button>
+        <button id="nextBtn">➡ Next</button>
+        <button onclick="window.location.href='../ring/index_ring.html'">🏠 Back to Ring</button>
+      </div>
+    </footer>
+  </div>
+
+
+  <script src="gameCase_viewer.js"></script>
+</body>
+</html>

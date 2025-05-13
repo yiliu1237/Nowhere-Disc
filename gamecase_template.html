@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Game Case - [Title]</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="gamecase">
+    <h1 contenteditable="true" id="gameTitle">[Game Title]</h1>
+    <div class="cover-upload">
+      <img id="coverPreview" src="cover.jpg" alt="Game Cover" class="cover" />
+      <input type="file" id="coverInput" accept="image/*" />
+      <label for="coverInput" class="upload-button" id="uploadLabel">Upload Cover</label>
+    </div>
+
+    <label for="gameType"><strong>Game Type:</strong></label>
+    <select id="gameType" name="gameType">
+      <option value="" disabled selected>Select a genre</option>
+      <option value="RPG">Role Playing Game</option>
+      <option value="ARPG">Action RPG</option>
+      <option value="SRPG">Simulation RPG</option>
+      <option value="RTS">Real Time Strategy</option>
+      <option value="AVG">Adventure Game</option>
+      <option value="SLG">Simulation Game</option>
+      <option value="RAC">Race Game</option>
+      <option value="ACT">Action Game</option>
+      <option value="SIM">Simulation</option>
+      <option value="EDU">Education</option>
+      <option value="FLY">Fly Game</option>
+      <option value="TAB">Table Game</option>
+      <option value="SPG">Sport Game</option>
+      <option value="FTG">Fighting Game</option>
+      <option value="SFTG">Simulation Fighting Game</option>
+      <option value="PUZ">Puzzle Game</option>
+      <option value="STG">Shooting Game</option>
+      <option value="ETC">Etcetera Game</option>
+    </select>
+
+    <label for="whyAbandonSelect"><strong>Why Abandoned:</strong></label>
+    <select id="whyAbandonSelect" name="whyAbandon">
+      <option value="" disabled selected>Select a reason</option>
+      <option value="TOO_AMBITIOUS">Scope too large or unrealistic</option>
+      <option value="DESIGN_FLAW">Core design had fundamental issues</option>
+      <option value="TECHNICAL_LIMIT">Hit technical limitations</option>
+      <option value="UNFUN">Prototype wasn't fun to play</option>
+      <option value="GENERIC">Too similar to existing games</option>
+      <option value="NO_CONTENT">Lacked compelling content/mechanics</option>
+      <option value="BAD_FEEDBACK">Received poor feedback</option>
+      <option value="TOO_COMPLEX">Systems became overly complicated</option>
+      <option value="UNSTABLE">Bugs or instability made it unworkable</option>
+      <option value="ENGINE_PROBLEM">Issues with engine/tools</option>
+      <option value="RESOURCE_LIMIT">Insufficient art/audio/level design</option>
+      <option value="OTHER">Other project-related reasons</option>
+    </select>
+
+    <section>
+      <h2>Description</h2>
+      <div class="editable-box" data-placeholder="A brief overview of the game's concept, core mechanics, and intended experience.">
+        <p contenteditable="true", class="editable", id="description"></p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Abandonment Details</h2>
+      <div class="editable-box" data-placeholder="Key challenges or limitations that led to the project's suspension - technical, creative, or personal.">
+        <p contenteditable="true", class="editable", id="whyAbandon"></p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Future Considerations</h2>
+      <div class="editable-box" data-placeholder="Potential future directions, design adjustments that could inform a reboot of the concept.">
+        <p contenteditable="true", class="editable", id="futureConsideration"></p>
+      </div>  
+    </section>
+
+
+    <section>
+      <h2>Contact</h2>
+      <div class="editable-box" data-placeholder="Contact information for follow-up or collaboration inquiries.">
+        <p contenteditable="true", class="editable", id="contactInfo"></p>
+      </div>
+    </section>
+
+    <button id="saveBtn">💾 Create the Game Case</button>
+
+    <button id="returnBtn">🏠 Back to Hub</button>
+
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <p>The game case has been created.</p>
+        <div class="modal-buttons">
+          <button id="viewRingBtn">🔄 View in the Ring</button>
+          <button id="closeModalBtn">OK</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="uploadCover.js"></script>
+    <script src="gameCase_editor.js"></script>
+</div>
+</body>
+</html>

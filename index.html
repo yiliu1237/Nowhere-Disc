@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Game Case Hub</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="centered">
+    <h1>Game Case Archive</h1>
+    <input type="text" id="searchBar" placeholder="Search abandoned ideas..." />
+    
+    <div class="filter">
+      <select id="gameType" name="gameType">
+        <option value="" disabled selected>Select a genre</option>
+        <option value="RPG">Role Playing Game</option>
+        <option value="ARPG">Action RPG</option>
+        <option value="SRPG">Simulation RPG</option>
+        <option value="RTS">Real Time Strategy</option>
+        <option value="AVG">Adventure Game</option>
+        <option value="SLG">Simulation Game</option>
+        <option value="RAC">Race Game</option>
+        <option value="ACT">Action Game</option>
+        <option value="SIM">Simulation</option>
+        <option value="EDU">Education</option>
+        <option value="FLY">Fly Game</option>
+        <option value="TAB">Table Game</option>
+        <option value="SPG">Sport Game</option>
+        <option value="FTG">Fighting Game</option>
+        <option value="SFTG">Simulation Fighting Game</option>
+        <option value="PUZ">Puzzle Game</option>
+        <option value="STG">Shooting Game</option>
+        <option value="ETC">Etcetera Game</option>
+      </select>
+      
+      <select id="reason">
+        <option value="" disabled selected>Select a reason</option>
+        <option value="TOO_AMBITIOUS">Scope too large or unrealistic</option>
+        <option value="DESIGN_FLAW">Core design had fundamental issues</option>
+        <option value="TECHNICAL_LIMIT">Hit technical limitations</option>
+        <option value="UNFUN">Prototype wasn't fun to play</option>
+        <option value="GENERIC">Too similar to existing games</option>
+        <option value="NO_CONTENT">Lacked compelling content/mechanics</option>
+        <option value="BAD_FEEDBACK">Received poor feedback</option>
+        <option value="TOO_COMPLEX">Systems became overly complicated</option>
+        <option value="UNSTABLE">Bugs or instability made it unworkable</option>
+        <option value="ENGINE_PROBLEM">Issues with engine/tools</option>
+        <option value="RESOURCE_LIMIT">Insufficient art/audio/level design</option>
+        <option value="OTHER">Other project-related reasons</option>
+        <option value="N/A">N/A</option>
+      </select>
+
+
+      <button id="search-btn">Search</button>
+    </div>
+
+    <button class="create-btn" onclick="window.location.href='gamecase_template.html'">Create Your Own Game Case</button>
+  </div>
+
+  <script src="main.js"></script>
+
+</body>
+</html>
